@@ -44,11 +44,10 @@ public class Interaction {
         Scanner scanner = new Scanner(System.in);
         int result = 0;
         while (result != 5) {
-            System.out.println("1. Показать древо");
-            System.out.println("2. Добавить человека");
-            System.out.println("3. Добавить связь");
-            System.out.println("4. Поиск по древу");
-            System.out.println("5. Назад");
+
+            for (Map.Entry<Integer, Option> el: researchMap.entrySet()) {
+                System.out.println(el.getKey() + " " + el.getValue().displayHelpInfo());
+            }
             if (scanner.hasNextInt()) {
                 if (researchMap.containsKey(result = scanner.nextInt())) {
                     researchMap.get(result).executeAction(familyController);
