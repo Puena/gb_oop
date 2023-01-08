@@ -22,11 +22,9 @@ public class Interaction {
         Scanner scanner = new Scanner(System.in);
         int result = 0;
         while(result != 5){
-            System.out.println("1. К дереву");
-            System.out.println("2. Создать новое генеалогическое древо");
-            System.out.println("3. Загрузить генеалогическое древо из файла");
-            System.out.println("4. Сохранить изменения");
-            System.out.println("5. Выйти");
+            for (Map.Entry<Integer, Option> el: mainMenu.entrySet()) {
+                System.out.println(el.getKey() + " " + el.getValue().displayHelpInfo());
+            }
             if (scanner.hasNextInt()){
                 if (mainMenu.containsKey(result = scanner.nextInt())) {
                     mainMenu.get(result).executeAction(familyController);

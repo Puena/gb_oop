@@ -7,6 +7,11 @@ import java.util.Scanner;
 
 public class AddNewMember implements Option{
     @Override
+    public String displayHelpInfo() {
+        return "добавть нового члена";
+    }
+
+    @Override
     public void executeAction(FamilyController controller) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя:");

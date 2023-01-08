@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class FindInTree implements Option{
     @Override
+    public String displayHelpInfo() {
+        return "найти";
+    }
+
+    @Override
     public void executeAction(FamilyController controller) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя:");

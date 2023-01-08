@@ -4,6 +4,12 @@ import java.util.Scanner;
 
 public class AddRelationship implements Option{
     FamilyController controller;
+
+    @Override
+    public String displayHelpInfo() {
+        return "доавть связь";
+    }
+
     @Override
     public void executeAction(FamilyController controller) {
         this.controller = controller;
